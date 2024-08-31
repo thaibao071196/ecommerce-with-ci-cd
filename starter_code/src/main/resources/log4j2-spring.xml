@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="sc_admin" packages="com.example.demo">
+    <Appenders>
+
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <SplunkHttp
+                name="http"
+                url="https://prd-p-yq45j.splunkcloud.com:8088"
+                token="ba631b0f-392a-4c62-afae-c1a958da0263"
+                index="http_last_project_udacity"
+                source="event-logs"
+                sourcetype="log4j"
+                host="localhost"
+                disableCertificateValidation="true"
+        >
+            <PatternLayout pattern="%m"/>
+        </SplunkHttp>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="http"/>
+        </Root>
+
+        <Logger name="com.example.demo" level="info">
+            <AppenderRef ref="http"/>
+        </Logger>
+    </Loggers>
+</Configuration>

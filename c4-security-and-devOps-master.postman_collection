@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "d82ba08c-0120-42f3-a532-bcd10b404006",
+		"name": "project-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17353547"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"baont14\",\r\n    \"password\": \"baont13admin\",\r\n    \"confirmPassword\": \"baont13admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"baont14\",\r\n    \"password\": \"baont13admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzI1MTAyMjE1LCJleHAiOjE3MjU3MDcwMTV9.N8WO-jYSac3PQCDIB8eTrTFUHIuJI3Ipno2en0Rr1YtSOBZKRRB0kzRdVwKmqNgAM8ggzH50fLV9dgMwbjghOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"locnb3\",\r\n    \"password\": \"locnb3admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/baont14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"baont14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzI1MTAyMjE1LCJleHAiOjE3MjU3MDcwMTV9.N8WO-jYSac3PQCDIB8eTrTFUHIuJI3Ipno2en0Rr1YtSOBZKRRB0kzRdVwKmqNgAM8ggzH50fLV9dgMwbjghOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemId\" : \"1\",\r\n    \"username\": \"baont14\",\r\n    \"quantity\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cart/addToCart",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"addToCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzI0ODM1ODAwLCJleHAiOjE3MjU0NDA2MDB9.UNpa08FghG9KjTLz73AueRxebBWZFoLOZ4TJ8YzwN1ojVCV-wPIQN4tcjtPM1KJTQ8jPuBVJHGxSin4I-eyRrA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/order/submit/baont14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"submit",
+						"baont14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzI1MTAyMjE1LCJleHAiOjE3MjU3MDcwMTV9.N8WO-jYSac3PQCDIB8eTrTFUHIuJI3Ipno2en0Rr1YtSOBZKRRB0kzRdVwKmqNgAM8ggzH50fLV9dgMwbjghOA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/order/history/baont14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"history",
+						"baont14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
