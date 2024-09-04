@@ -21,11 +21,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/user/create",
+					"raw": "localhost:8082/api/user/create",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"user",
@@ -50,11 +50,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/login",
+					"raw": "localhost:8082/login",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"login"
 					]
@@ -90,11 +90,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/user/baont14",
+					"raw": "localhost:8082/api/user/baont14",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"user",
@@ -129,11 +129,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/cart/addToCart",
+					"raw": "localhost:8082/api/cart/addToCart",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"cart",
@@ -168,11 +168,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/order/submit/baont14",
+					"raw": "localhost:8082/api/order/submit/baont14",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"order",
@@ -211,11 +211,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/order/history/baont14",
+					"raw": "localhost:8082/api/order/history/baont14",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"order",
