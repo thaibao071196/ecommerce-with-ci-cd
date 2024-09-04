@@ -1,0 +1,35 @@
+pipeline {
+ agent any
+ stages {
+   stage("Clean Up") {
+     steps {
+       deleteDir()
+     }
+   }
+   stage("Build") {
+     steps {
+       dir("ecommerce-with-ci-cd/starter_code") {
+         sh "mvn clean install"
+       }
+     }
+   }
+   stage("Test") {
+     steps {
+       dir("ecommerce-with-ci-cd/starter_code") {
+         sh "mvn test"
+       }
+     }
+   }
+ }
+  post {
+         success {
+         }
+         failure {
+             echo 'Build or Test failed!'
+         }
+         always {
+             // delete workspace after when pipeline completely!
+             cleanWs()
+         }
+     }
+}
