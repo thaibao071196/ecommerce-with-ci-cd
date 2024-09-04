@@ -15,7 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class SareetaApplication {
     private static Logger log = ((LoggerContext) LogManager.getContext(false)).getLogger(SareetaApplication.class.getName());
     public static void main(String[] args) {
-        log.info("Application run success at port: 8080");
+        log.info("Application run success at port: 8082");
         SpringApplication.run(SareetaApplication.class, args);
     }
 }
