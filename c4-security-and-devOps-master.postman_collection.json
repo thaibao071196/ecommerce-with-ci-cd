@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "d82ba08c-0120-42f3-a532-bcd10b404006",
-		"name": "project-4",
+		"_postman_id": "4aab4708-8fe9-4bbd-aab7-f2be89b59f55",
+		"name": "c4-security-and-devOps-master",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17353547"
 	},
@@ -82,7 +82,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"locnb3\",\r\n    \"password\": \"locnb3admin\"\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
