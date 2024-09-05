@@ -3,7 +3,9 @@ pipeline {
  stages {
    stage("Build") {
      steps {
-       sh "mvn clean install"
+       dir("ecommerce-with-ci-cd") {
+         sh "mvn clean install"
+       }
      }
    }
    stage("Test") {
