@@ -4,6 +4,7 @@ pipeline {
    stage("Build") {
      steps {
        dir("starter_code") {
+         echo "building..."
          sh "mvn clean install"
        }
      }
